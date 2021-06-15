@@ -1,1 +1,2 @@
-# gitListApp_ios
+# gitHubListapp_ios
+Versao IOS do app do gitHub
