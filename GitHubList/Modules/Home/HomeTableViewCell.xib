@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="GitHubList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome Repositorio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K44-3y-qeN" userLabel="name_repo">
+                        <rect key="frame" x="16" y="16" width="136" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="linkColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descricao leve do esquema, depois disso o esquema fica mais complicado" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQO-Ex-ktA" userLabel="description_repo">
+                        <rect key="frame" x="16" y="41" width="200" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="edB-m2-TLk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="-3"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuningfork" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kBm-c1-uLH">
+                        <rect key="frame" x="16" y="104" width="20" height="20"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="FdV-fh-7Ev"/>
+                            <constraint firstAttribute="width" constant="20" id="fBp-If-rWZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="640" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Le-lz-DRJ" userLabel="num_forks">
+                        <rect key="frame" x="44" y="104" width="28" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemYellowColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="s3W-8c-prf">
+                        <rect key="frame" x="96" y="103.5" width="20" height="20"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="EhR-Ca-nvd"/>
+                            <constraint firstAttribute="height" constant="20" id="fCm-D6-Pdv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-L6-nIX" userLabel="num_stars">
+                        <rect key="frame" x="124" y="104" width="19" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="systemYellowColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MoE-kv-uIW" userLabel="user_image">
+                        <rect key="frame" x="334" y="17.5" width="70" height="67.5"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="ERJ-zs-kx4"/>
+                            <constraint firstAttribute="width" constant="70" id="FkX-2o-9J3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vQ-Y8-sj1" userLabel="user_name">
+                        <rect key="frame" x="335" y="94" width="69" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="AccentColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="s3W-8c-prf" firstAttribute="leading" secondItem="6Le-lz-DRJ" secondAttribute="trailing" constant="24" id="BjN-DB-Z6p"/>
+                    <constraint firstItem="X8f-L6-nIX" firstAttribute="top" secondItem="qQO-Ex-ktA" secondAttribute="bottom" constant="16" id="DDq-f7-mDl"/>
+                    <constraint firstItem="qQO-Ex-ktA" firstAttribute="top" secondItem="K44-3y-qeN" secondAttribute="bottom" constant="4" id="EUB-lW-Qjn"/>
+                    <constraint firstItem="qQO-Ex-ktA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="FAn-5q-2ie"/>
+                    <constraint firstAttribute="trailing" secondItem="MoE-kv-uIW" secondAttribute="trailing" constant="16" id="OTB-wU-FlY"/>
+                    <constraint firstItem="K44-3y-qeN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="V5Q-xc-jTK"/>
+                    <constraint firstItem="MoE-kv-uIW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="VsR-Cj-bom"/>
+                    <constraint firstItem="kBm-c1-uLH" firstAttribute="top" secondItem="qQO-Ex-ktA" secondAttribute="bottom" constant="16" id="Xwb-RO-32m"/>
+                    <constraint firstAttribute="trailing" secondItem="9vQ-Y8-sj1" secondAttribute="trailing" constant="16" id="a6O-g0-nrR"/>
+                    <constraint firstItem="6Le-lz-DRJ" firstAttribute="leading" secondItem="kBm-c1-uLH" secondAttribute="trailing" constant="8" id="b77-ve-UZE"/>
+                    <constraint firstItem="s3W-8c-prf" firstAttribute="top" secondItem="qQO-Ex-ktA" secondAttribute="bottom" constant="16" id="fWQ-10-HGY"/>
+                    <constraint firstItem="6Le-lz-DRJ" firstAttribute="top" secondItem="qQO-Ex-ktA" secondAttribute="bottom" constant="16" id="gAF-vu-52i"/>
+                    <constraint firstItem="K44-3y-qeN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hqf-2S-gIh"/>
+                    <constraint firstAttribute="bottom" secondItem="kBm-c1-uLH" secondAttribute="bottom" constant="16" id="jZi-EI-oHN"/>
+                    <constraint firstItem="X8f-L6-nIX" firstAttribute="leading" secondItem="s3W-8c-prf" secondAttribute="trailing" constant="8" id="nk5-1R-e7I"/>
+                    <constraint firstItem="9vQ-Y8-sj1" firstAttribute="top" secondItem="MoE-kv-uIW" secondAttribute="bottom" constant="8" id="qM4-Tu-Jts"/>
+                    <constraint firstItem="kBm-c1-uLH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rc8-c9-D4X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descricao_repo" destination="qQO-Ex-ktA" id="Diq-ND-JvM"/>
+                <outlet property="imageUser" destination="MoE-kv-uIW" id="jX7-ZJ-Rsz"/>
+                <outlet property="name" destination="K44-3y-qeN" id="Fjy-qD-V6z"/>
+                <outlet property="num_forks" destination="6Le-lz-DRJ" id="RRO-sk-Zxy"/>
+                <outlet property="num_stars" destination="X8f-L6-nIX" id="AjP-Md-rIv"/>
+                <outlet property="username" destination="9vQ-Y8-sj1" id="rrQ-Q4-s20"/>
+            </connections>
+            <point key="canvasLocation" x="-17" y="109"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="tuningfork" catalog="system" width="128" height="116"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
