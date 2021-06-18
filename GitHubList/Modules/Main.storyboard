@@ -43,13 +43,28 @@
         <scene sceneID="O0q-QL-5gL">
             <objects>
                 <viewController storyboardIdentifier="PullViewController" id="Qua-dg-XnU" customClass="PullViewController" customModule="GitHubList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hpe-bj-EVC" customClass="PullVIew">
+                    <view key="view" contentMode="scaleToFill" id="hpe-bj-EVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gv8-k1-lnX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IfK-hp-uik"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IfK-hp-uik" firstAttribute="trailing" secondItem="gv8-k1-lnX" secondAttribute="trailing" id="E8f-3j-xqb"/>
+                            <constraint firstItem="gv8-k1-lnX" firstAttribute="top" secondItem="IfK-hp-uik" secondAttribute="top" id="Mrn-g3-c92"/>
+                            <constraint firstItem="IfK-hp-uik" firstAttribute="bottom" secondItem="gv8-k1-lnX" secondAttribute="bottom" id="RwP-Kf-bZN"/>
+                            <constraint firstItem="gv8-k1-lnX" firstAttribute="leading" secondItem="IfK-hp-uik" secondAttribute="leading" id="ob6-Tc-4KS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NNc-tH-ESB"/>
+                    <connections>
+                        <outlet property="tablePull" destination="gv8-k1-lnX" id="TPP-IW-ylw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjf-sQ-KYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

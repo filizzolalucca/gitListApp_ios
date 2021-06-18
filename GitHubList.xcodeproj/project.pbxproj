@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,10 @@
 		2836347C267B94E4004C5A5A /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836347B267B94E4004C5A5A /* NSObject.swift */; };
 		2836347E267B9922004C5A5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836347D267B9922004C5A5A /* Constants.swift */; };
 		2852DEB4267CEE97001A18E8 /* UiImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2852DEB3267CEE97001A18E8 /* UiImageView.swift */; };
+		287100DC267D22AE00E828A3 /* PullProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287100DB267D22AE00E828A3 /* PullProvider.swift */; };
+		287100DF267D2DD700E828A3 /* PullViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287100DE267D2DD700E828A3 /* PullViewModel.swift */; };
+		287100E2267D2FD200E828A3 /* PullTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287100E0267D2FD200E828A3 /* PullTableViewCell.swift */; };
+		287100E3267D2FD200E828A3 /* PullTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287100E1267D2FD200E828A3 /* PullTableViewCell.xib */; };
 		287D4181267A42DD00B60930 /* API_Maneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D4180267A42DD00B60930 /* API_Maneger.swift */; };
 		287D4184267A4F5600B60930 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D4183267A4F5600B60930 /* HomeProvider.swift */; };
 		287D4186267A6C0C00B60930 /* PullModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D4185267A6C0C00B60930 /* PullModel.swift */; };
@@ -39,6 +43,10 @@
 		2836347B267B94E4004C5A5A /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		2836347D267B9922004C5A5A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2852DEB3267CEE97001A18E8 /* UiImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiImageView.swift; sourceTree = "<group>"; };
+		287100DB267D22AE00E828A3 /* PullProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullProvider.swift; sourceTree = "<group>"; };
+		287100DE267D2DD700E828A3 /* PullViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullViewModel.swift; sourceTree = "<group>"; };
+		287100E0267D2FD200E828A3 /* PullTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullTableViewCell.swift; sourceTree = "<group>"; };
+		287100E1267D2FD200E828A3 /* PullTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullTableViewCell.xib; sourceTree = "<group>"; };
 		287D4180267A42DD00B60930 /* API_Maneger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Maneger.swift; sourceTree = "<group>"; };
 		287D4183267A4F5600B60930 /* HomeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
 		287D4185267A6C0C00B60930 /* PullModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullModel.swift; sourceTree = "<group>"; };
@@ -88,6 +96,22 @@
 				28363476267B7691004C5A5A /* HomeViewModel.swift */,
 			);
 			name = viewModel;
+			sourceTree = "<group>";
+		};
+		287100DA267D1A8300E828A3 /* Pull */ = {
+			isa = PBXGroup;
+			children = (
+				287100DB267D22AE00E828A3 /* PullProvider.swift */,
+			);
+			path = Pull;
+			sourceTree = "<group>";
+		};
+		287100DD267D2DBC00E828A3 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				287100DE267D2DD700E828A3 /* PullViewModel.swift */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		287D417F267A42B000B60930 /* api_maneger */ = {
@@ -191,6 +215,7 @@
 		28ADB2C72677BD3E007025AF /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				287100DA267D1A8300E828A3 /* Pull */,
 				287D4182267A4F4300B60930 /* Home */,
 			);
 			path = Provider;
@@ -235,6 +260,7 @@
 		28D54FCF26790CE000FCB119 /* pull */ = {
 			isa = PBXGroup;
 			children = (
+				287100DD267D2DBC00E828A3 /* viewModel */,
 				28D54FD226790D2E00FCB119 /* PullViewController.swift */,
 				28D54FDB2679332E00FCB119 /* cell */,
 				28D54FD42679143000FCB119 /* model */,
@@ -270,6 +296,8 @@
 		28D54FDB2679332E00FCB119 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				287100E0267D2FD200E828A3 /* PullTableViewCell.swift */,
+				287100E1267D2FD200E828A3 /* PullTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -345,6 +373,7 @@
 				28ADB2BD26778D8B007025AF /* LaunchScreen.storyboard in Resources */,
 				28D54FCE26790BCA00FCB119 /* Main.storyboard in Resources */,
 				28D54FDA2679155400FCB119 /* HomeTableViewCell.xib in Resources */,
+				287100E3267D2FD200E828A3 /* PullTableViewCell.xib in Resources */,
 				28ADB2BA26778D8B007025AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +429,7 @@
 			files = (
 				287D418D267A8AE300B60930 /* ServiceError.swift in Sources */,
 				2836347E267B9922004C5A5A /* Constants.swift in Sources */,
+				287100DC267D22AE00E828A3 /* PullProvider.swift in Sources */,
 				2836347C267B94E4004C5A5A /* NSObject.swift in Sources */,
 				2836347A267B91A5004C5A5A /* TableView.swift in Sources */,
 				28ADB2B126778D8A007025AF /* AppDelegate.swift in Sources */,
@@ -408,7 +438,9 @@
 				287D4186267A6C0C00B60930 /* PullModel.swift in Sources */,
 				2852DEB4267CEE97001A18E8 /* UiImageView.swift in Sources */,
 				28D54FD92679155400FCB119 /* HomeTableViewCell.swift in Sources */,
+				287100DF267D2DD700E828A3 /* PullViewModel.swift in Sources */,
 				28ADB2B326778D8A007025AF /* SceneDelegate.swift in Sources */,
+				287100E2267D2FD200E828A3 /* PullTableViewCell.swift in Sources */,
 				287D4181267A42DD00B60930 /* API_Maneger.swift in Sources */,
 				287D4189267A844700B60930 /* EndPoints.swift in Sources */,
 				28363477267B7691004C5A5A /* HomeViewModel.swift in Sources */,

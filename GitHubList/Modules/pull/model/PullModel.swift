@@ -7,17 +7,21 @@
 
 import Foundation
 
+//struct PullResponse {
+//    let listPullRequestes:[PullModel]
+//}
+
 
 struct PullModel:Codable {
-    let title:String
-    let body:String
-    let user:User
+    let title:String?
+    let body:String?
+    let user:User?
     
 }
 
 struct User: Codable{
-    let username:String
-    let imageurl:String
+    let username:String?
+    let imageurl:String?
     
     enum CodingKeys:String,CodingKey {
         case username = "login"
