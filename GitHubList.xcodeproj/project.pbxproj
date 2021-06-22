@@ -174,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				28ADB2C62677B9DD007025AF /* System */,
-				28ADB2C82677BE03007025AF /* Maneger */,
 				28ADB2C92677BE0F007025AF /* Commum */,
 				28ADB2C72677BD3E007025AF /* Provider */,
 				28ADB2C42677B941007025AF /* Modules */,
@@ -187,8 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				28D54FCD26790BCA00FCB119 /* Main.storyboard */,
-				28D54FCF26790CE000FCB119 /* pull */,
 				28ADB2CB2677C4CE007025AF /* Home */,
+				28D54FCF26790CE000FCB119 /* Pull */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -221,13 +220,6 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
-		28ADB2C82677BE03007025AF /* Maneger */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Maneger;
-			sourceTree = "<group>";
-		};
 		28ADB2C92677BE0F007025AF /* Commum */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +249,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		28D54FCF26790CE000FCB119 /* pull */ = {
+		28D54FCF26790CE000FCB119 /* Pull */ = {
 			isa = PBXGroup;
 			children = (
 				287100DD267D2DBC00E828A3 /* viewModel */,
@@ -265,7 +257,7 @@
 				28D54FDB2679332E00FCB119 /* cell */,
 				28D54FD42679143000FCB119 /* model */,
 			);
-			path = pull;
+			path = Pull;
 			sourceTree = "<group>";
 		};
 		28D54FD42679143000FCB119 /* model */ = {

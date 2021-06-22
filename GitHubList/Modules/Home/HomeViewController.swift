@@ -71,8 +71,8 @@ extension HomeViewController : HomeTableViewDelegate{
         pullVC.repoName=repoName
         pullVC.userName=username
     
-        
-        self.present(pullVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(pullVC, animated: true)
+//        self.present(pullVC, animated: true, completion: nil)
         
     }
 }
@@ -93,10 +93,5 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
         //aumenta o tamanho das cell
         return UITableView.automaticDimension
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            print("batata")
-        }
-    
     
 }

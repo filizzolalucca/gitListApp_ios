@@ -17,14 +17,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="420" height="180"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Titulo do Pull Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-qX-xLA">
-                        <rect key="frame" x="16" y="32" width="166" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do Pull Request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-qX-xLA">
+                        <rect key="frame" x="16" y="32" width="166" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="AccentColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Descricao do pull resquest vai ficar aqui entao e melhor mandar a boa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-26-gdf">
-                        <rect key="frame" x="16" y="61" width="200" height="29"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Descricao do pull resquest vai ficar aqui entao e melhor mandar a boa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-26-gdf">
+                        <rect key="frame" x="16" y="69" width="200" height="29"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="SUB-2D-qp0"/>
                         </constraints>
@@ -60,6 +60,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descricao_pr" destination="6Cw-26-gdf" id="Yfy-H5-9qM"/>
+                <outlet property="title" destination="uxA-qX-xLA" id="AqM-MW-K1V"/>
+                <outlet property="userName" destination="Qkb-nD-QrY" id="yIj-yW-qoo"/>
+                <outlet property="user_image" destination="Ava-tz-L6k" id="bHM-2K-hUq"/>
+            </connections>
             <point key="canvasLocation" x="186.95652173913044" y="42.857142857142854"/>
         </tableViewCell>
     </objects>

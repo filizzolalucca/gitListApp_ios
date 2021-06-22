@@ -7,9 +7,8 @@
 
 import Foundation
 
-//struct PullResponse {
-//    let listPullRequestes:[PullModel]
-//}
+
+
 
 
 struct PullModel:Codable {
