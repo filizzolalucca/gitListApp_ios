@@ -68,6 +68,7 @@ extension HomeViewController : HomeTableViewDelegate{
         pullVC.userName=username
     
         self.navigationController?.pushViewController(pullVC, animated: true)
+        
     }
 }
 

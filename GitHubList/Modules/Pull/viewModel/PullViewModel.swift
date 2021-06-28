@@ -19,7 +19,6 @@ class PullViewModel{
     //MARK: - Public proprietes
     weak var delagate:PullViewModelDelegate?
     let provider:PullProviderDelegate
-    var data:[PullModel]?
     var pullList:[PullModel]=[]
     var numberOfPRs:Int = 0
     
@@ -30,7 +29,6 @@ class PullViewModel{
     
     //MARK: - Class methods
     private func refreshContent(data:[PullModel]){
-        self.data = data
         self.pullList = data
         self.numberOfPRs = pullList.count
     }
