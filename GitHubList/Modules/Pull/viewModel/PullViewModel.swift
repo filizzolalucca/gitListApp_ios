@@ -37,7 +37,6 @@ class PullViewModel{
     
     //MARK: - Public methods
     
-    //Pedir uma explicacao melhor dessa funcao
     func fechData(userName:String,repoName:String){
         self.provider.getRepositoriosInfo(userName: userName, repoName: repoName, successCallBack:{
             [weak self] (data) in self?.refreshContent(data: data)

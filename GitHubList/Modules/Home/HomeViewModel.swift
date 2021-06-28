@@ -7,7 +7,7 @@
 
 import Foundation
 
-//Explicando para eu anotar depois, a ViewModel é responsavel por criar e disparar o delegate. Enquanto a viewController que esta assinada como o seu delegate ira realizar alguma acao por conta desse desparo
+//A ViewModel é responsavel por criar e disparar o delegate. Enquanto a viewController que esta assinada como o seu delegate ira realizar alguma acao por conta desse desparo
 
 
 protocol HomeViewModelDelegate: NSObject{
@@ -18,7 +18,7 @@ class HomeViewModel{
     
     //MARK: - public properties
     
-    // se eu perder a referencia dessa delegate, nao vai dar pau por causa da weak
+    // se eu perder a referencia dessa delegate, nao vai dar erro  por causa da weak
     weak var delagate: HomeViewModelDelegate?
     let provider: HomeProviderDelegate
     var data: Welcome?
@@ -41,7 +41,7 @@ class HomeViewModel{
     //MARK: - Public methods(Aonde vai disparar o delegate)
     
     
-    //Tenho que entender melhor estas paradas de weak self(eu nao sei se eu vou perder ou nao a referencia)
+    //Eu nao sei se eu vou perder ou nao a referencia, por isso o weak self
     func fechData(){
         self.provider.getRepositoriosInfo(successCallBack: {[weak self] (data) in
             self?.refresehContent(data: data)

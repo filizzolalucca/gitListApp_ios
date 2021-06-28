@@ -106,7 +106,7 @@
                 <outlet property="num_stars" destination="X8f-L6-nIX" id="AjP-Md-rIv"/>
                 <outlet property="username" destination="9vQ-Y8-sj1" id="rrQ-Q4-s20"/>
             </connections>
-            <point key="canvasLocation" x="-17" y="109"/>
+            <point key="canvasLocation" x="-80" y="129"/>
         </tableViewCell>
     </objects>
     <resources>

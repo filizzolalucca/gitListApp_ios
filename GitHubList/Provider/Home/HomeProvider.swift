@@ -7,14 +7,12 @@
 
 import Foundation
 
-//Oque seria este @escaping
-//R:response result da retrofit
+
 
 protocol HomeProviderDelegate {
     func getRepositoriosInfo(successCallBack: @escaping (Welcome) -> Void, errorCallBack: @escaping (Error) -> Void)
 }
-//Como este delegate se difere dos demais ?, da view Model e da cell.
-//Os Protocols sao tipo interfaces ? -> Sao como se fosse interfaces, pesquisar sobre a diferença.
+
 class HomeProvider : HomeProviderDelegate {
     
     func getRepositoriosInfo(successCallBack: @escaping (Welcome) -> Void, errorCallBack: @escaping (Error) -> Void) {

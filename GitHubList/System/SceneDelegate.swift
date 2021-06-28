@@ -13,6 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        //Cricao do NavigationController da View Principal
         guard let tela = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: tela)
            let nav1 = UINavigationController()

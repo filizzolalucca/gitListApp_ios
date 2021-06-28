@@ -19,7 +19,9 @@ enum EndPoints{
         return "https://api.githu.com"
         #endif
     }
-    //Estes parametros a gente passa como ? -> por replace
+    
+    
+    //Os parametros sao passados por replace nas Provider(Classes que fazem conexoes com a api)
     
     private enum Key{
         static let home = "/search/repositories?q=language:Java&sort=stars&page=1"

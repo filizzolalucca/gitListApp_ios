@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
         self.table.delegate = self
         self.table.dataSource = self
         self.table.registerCell(HomeTableViewCell.className)
-        //quando eu declaro algo como meu delgate, eu aviso que vou fazer algo quando o metodo disparar na view Model
+        //quando eu declaro algo como meu delagate, eu aviso que vou fazer algo quando o metodo disparar na view Model
         self.viewModel?.delagate = self
         self.viewModel?.fechData()
         
@@ -49,14 +49,11 @@ extension HomeViewController : HomeViewModelDelegate{
     func successReponse() {
         DispatchQueue.main.async {
             self.table.reloadData()
-            //          DispatchQueue.main.asyncAfter(deadline: .now() + DELAY_LOADING) {
-            //            //self.showLoading(false)
-            //          }
         }
     }
     
     func errorResponse() {
-        print("deu ruim marreco")
+        print("falha na tentativa de requisição")
     }
     
     
@@ -66,14 +63,11 @@ extension HomeViewController : HomeViewModelDelegate{
 extension HomeViewController : HomeTableViewDelegate{
     func didClickedRepo(repoName: String, username: String) {
         
-        //voces fazem algo mais compicado, mas como eu tenho que passar parametro imagino que essa forma nao sirva de muita coisa
         let pullVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PullViewController") as! PullViewController
         pullVC.repoName=repoName
         pullVC.userName=username
     
         self.navigationController?.pushViewController(pullVC, animated: true)
-//        self.present(pullVC, animated: true, completion: nil)
-        
     }
 }
 
@@ -90,7 +84,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //aumenta o tamanho das cell
+        //aumenta o tamanho da cell
         return UITableView.automaticDimension
     }
     

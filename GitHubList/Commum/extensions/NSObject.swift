@@ -1,13 +1,10 @@
 //
-//  NSObject.swift
-//  GitHubList
 //
 //  Created by Lucca Filizzola on 17/06/21.
 //
 import Foundation
 
-//Qual a ideia por tras desse NSObject ?
-//
+
 extension NSObject {
   static var className: String {
     return String(describing: self)

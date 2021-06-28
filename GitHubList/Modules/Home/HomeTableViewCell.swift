@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol HomeTableViewDelegate:class {
+protocol HomeTableViewDelegate:AnyObject {
     func didClickedRepo(repoName:String,username:String)
 }
 class HomeTableViewCell: UITableViewCell {

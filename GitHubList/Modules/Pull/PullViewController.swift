@@ -52,14 +52,11 @@ extension PullViewController:PullViewModelDelegate{
     func successResponse() {
         DispatchQueue.main.async {
             self.tablePull.reloadData()
-            //          DispatchQueue.main.asyncAfter(deadline: .now() + DELAY_LOADING) {
-            //            //self.showLoading(false)
-            //          }
         }
     }
     
     func errorResponse() {
-        print("deu ruim marreco")
+        print("falha na tentativa de requisição")
     }
 }
 

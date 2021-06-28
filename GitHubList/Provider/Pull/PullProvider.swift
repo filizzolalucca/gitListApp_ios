@@ -7,7 +7,7 @@
 
 import Foundation
 
-//
+//Provider sao classes responsaveis por realizar chamadas de API
 
 protocol PullProviderDelegate {
     func getRepositoriosInfo(userName:String,repoName:String,successCallBack: @escaping ([PullModel]) -> Void, errorCallBack: @escaping (Error) -> Void)
@@ -21,6 +21,7 @@ class PullProvider:PullProviderDelegate{
         
         APIManager.request(method: .get, parameters: nil, url: url) { (response) in
             switch response {
+            //Quando O json retorna apenas uma lista de elementos a conversao é feita dessa forma
             case .success(let data):
                 let jsonData = try? JSONSerialization.data(withJSONObject: data)
                 
@@ -35,12 +36,7 @@ class PullProvider:PullProviderDelegate{
                     errorCallBack(ServiceError.parsing)
                     
                 }
-//                if let json = data as? JSON,
-//                   let model = json.decode([PullModel].self) {
-//                    successCallBack(model)
-//                } else {
-//                    errorCallBack(ServiceError.parsing)
-//                }
+
             case .failure(let error):
                 print(error)
                 errorCallBack(ServiceError.failure)
