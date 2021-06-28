@@ -85,7 +85,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //aumenta o tamanho da cell
+        //aumenta o tamanho das cell
         return UITableView.automaticDimension
     }
     
