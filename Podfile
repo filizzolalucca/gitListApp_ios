@@ -4,6 +4,7 @@
 target 'GitHubList' do
 
 
+ use_frameworks!
 
   pod 'SDWebImage', '~> 5.9'
   

@@ -1,0 +1,12 @@
+
+    # Xcode
+xcuserdata/
+project.xcworkspace/
+DerivedData/
+# Mac OS X Finder
+.DS_Store
+# Cocoapods
+Pods/
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace

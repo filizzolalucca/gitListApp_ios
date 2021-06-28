@@ -10,10 +10,13 @@ import UIKit
 class HomeViewController: UIViewController {
     
     //MARK: -Outlets
-
-    @IBOutlet weak var table: UITableView!
     
+    
+    @IBOutlet weak var table: UITableView!
     //MARK: - Class proprietes
+    private var viewModel:HomeViewModel?
+    
+    
     
     
     //MARK: - Life Cycle
@@ -21,35 +24,69 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let provider = HomeProvider()
+        self.viewModel = HomeViewModel(provider: provider)
+        self.table.delegate = self
+        self.table.dataSource = self
+        self.table.registerCell(HomeTableViewCell.className)
+        //quando eu declaro algo como meu delagate, eu aviso que vou fazer algo quando o metodo disparar na view Model
+        self.viewModel?.delagate = self
+        self.viewModel?.fechData()
+        
         
     }
     
     
-    //MARK: - Extensions
-   
     
+    
+    
+    
+}
+//MARK: - Extensions
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension HomeViewController : HomeViewModelDelegate{
+    func successReponse() {
+        DispatchQueue.main.async {
+            self.table.reloadData()
+        }
     }
-    */
+    
+    func errorResponse() {
+        print("falha na tentativa de requisição")
+    }
+    
+    
+    
+}
 
+extension HomeViewController : HomeTableViewDelegate{
+    func didClickedRepo(repoName: String, username: String) {
+        
+        let pullVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PullViewController") as! PullViewController
+        pullVC.repoName=repoName
+        pullVC.userName=username
+    
+        self.navigationController?.pushViewController(pullVC, animated: true)
+        
+    }
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        return viewModel?.numberOfRepositorios ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(ofType: HomeTableViewCell.self, for: indexPath)
+        cell.passData(viewModel?.repoList[indexPath.row])
+        cell.delegate =  self
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //aumenta o tamanho da cell
+        return UITableView.automaticDimension
+    }
     
 }
