@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Resolver
 
 
 
@@ -19,20 +19,18 @@ class PullViewController: UIViewController {
     //MARK: - Class Proprietes
     
 
-    private var viewModel:PullViewModel?
+    private var viewModel:PullViewModel = Resolver.resolve()
     var repoName:String?
     var userName:String?
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let provider = PullProvider()
-        self.viewModel = PullViewModel(provider: provider)
         self.tablePull.delegate = self
         self.tablePull.dataSource = self
         self.tablePull.registerCell(PullTableViewCell.className)
-        self.viewModel?.delagate = self
-        self.viewModel?.fechData(userName: userName ?? " ", repoName: repoName ?? " ")
+        self.viewModel.delagate = self
+        self.viewModel.fechData(userName: userName ?? " ", repoName: repoName ?? " ")
         
 
         
@@ -62,12 +60,12 @@ extension PullViewController:PullViewModelDelegate{
 
 extension PullViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfPRs ?? 0
+        return viewModel.numberOfPRs ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(ofType: PullTableViewCell.self, for: indexPath)
-        cell.passData(viewModel?.pullList[indexPath.row])
+        cell.passData(viewModel.pullList[indexPath.row])
         return cell
     }
     

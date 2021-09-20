@@ -50,6 +50,7 @@ class HomeTableViewCell: UITableViewCell {
         self.num_forks.text = String(data?.numForks ?? 0)
         self.num_stars.text = String(data?.starNumber ?? 0)
         self.username.text = data?.owner?.login ?? "-"
+        print(data?.owner?.imageURL)
         self.imageUser.cacheImageSDWebImage(from: data?.owner?.imageURL, contentMode: .scaleAspectFill, completion: nil)
         
     }

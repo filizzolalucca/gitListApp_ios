@@ -6,24 +6,74 @@
 //
 
 import UIKit
+import Resolver
+
+
 
 class PullViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    //MARK: - Outlets
+    
+    
+    @IBOutlet weak var tablePull: UITableView!
+    //MARK: - Class Proprietes
     
 
-    /*
-    // MARK: - Navigation
+    private var viewModel:PullViewModel = Resolver.resolve()
+    var repoName:String?
+    var userName:String?
+    
+    //MARK: - LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tablePull.delegate = self
+        self.tablePull.dataSource = self
+        self.tablePull.registerCell(PullTableViewCell.className)
+        self.viewModel.delagate = self
+        self.viewModel.fechData(userName: userName ?? " ", repoName: repoName ?? " ")
+        
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    
+    
+    
+    
+    
 
+    
+}
+
+//MARK: - Extensios
+
+extension PullViewController:PullViewModelDelegate{
+    func successResponse() {
+        DispatchQueue.main.async {
+            self.tablePull.reloadData()
+        }
+    }
+    
+    func errorResponse() {
+        print("falha na tentativa de requisição")
+    }
+}
+
+extension PullViewController:UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfPRs ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(ofType: PullTableViewCell.self, for: indexPath)
+        cell.passData(viewModel.pullList[indexPath.row])
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //aumenta o tamanho das cell
+        return UITableView.automaticDimension
+    }
+    
+    
 }

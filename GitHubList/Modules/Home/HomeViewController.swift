@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Resolver
 
 class HomeViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var table: UITableView!
     //MARK: - Class proprietes
-    private var viewModel:HomeViewModel?
+    var viewModel:HomeViewModel = Resolver.resolve()
     
     
     
@@ -24,14 +25,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let provider = HomeProvider()
-        self.viewModel = HomeViewModel(provider: provider)
         self.table.delegate = self
         self.table.dataSource = self
         self.table.registerCell(HomeTableViewCell.className)
         //quando eu declaro algo como meu delagate, eu aviso que vou fazer algo quando o metodo disparar na view Model
-        self.viewModel?.delagate = self
-        self.viewModel?.fechData()
+        self.viewModel.delagate = self
+        self.viewModel.fechData()
         
         
     }
@@ -74,12 +73,12 @@ extension HomeViewController : HomeTableViewDelegate{
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.numberOfRepositorios ?? 0
+        return viewModel.numberOfRepositorios ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(ofType: HomeTableViewCell.self, for: indexPath)
-        cell.passData(viewModel?.repoList[indexPath.row])
+        cell.passData(viewModel.repoList[indexPath.row])
         cell.delegate =  self
         return cell
     }

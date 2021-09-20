@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Resolver
 
 
 protocol PullViewModelDelegate : NSObject{
@@ -18,15 +19,10 @@ class PullViewModel{
     
     //MARK: - Public proprietes
     weak var delagate:PullViewModelDelegate?
-    let provider:PullProviderDelegate
+    let provider:PullProviderDelegate = Resolver.resolve()
     var pullList:[PullModel]=[]
     var numberOfPRs:Int = 0
-    
-    //MARK: - init method
-    init(provider:PullProviderDelegate) {
-        self.provider = provider
-    }
-    
+        
     //MARK: - Class methods
     private func refreshContent(data:[PullModel]){
         self.pullList = data

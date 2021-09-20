@@ -1,4 +1,4 @@
-module Pods_GitHubList {
+framework module Pods_GitHubList {
   umbrella header "Pods-GitHubList-umbrella.h"
 
   export *

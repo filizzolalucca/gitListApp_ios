@@ -9,6 +9,8 @@ target 'GitHubList' do
   pod 'SDWebImage', '~> 5.9'
   
   pod 'Alamofire', '~> 4.9.1'
-  
+
+  pod 'Resolver', '~> 1.0.7'
+
 
 end
