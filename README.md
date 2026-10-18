@@ -11,6 +11,12 @@ There is also an Android version of the same app: [GitHubList_android](https://g
   <img src="https://img.shields.io/badge/CocoaPods-EE3322?logo=cocoapods&logoColor=white" alt="CocoaPods">
 </p>
 
+<p align="center">
+  <img src="docs/screenshots/repositories.jpg" alt="Repository list" width="250">
+  &nbsp;
+  <img src="docs/screenshots/pull-requests.jpg" alt="Pull request list" width="250">
+</p>
+
 ## Features
 
 - **Repositories**: most-starred Java repositories, showing the name, description, owner, stars and forks
